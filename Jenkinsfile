@@ -1,6 +1,6 @@
 pipeline
 {
-  agents any
+  agent any
   stages
   {
     stage("Build")
@@ -8,7 +8,7 @@ pipeline
       steps
       {
         echo "build success"
-        "mvn clean"
+        mvn clean
       }
     }
     stage("Compile")
@@ -16,7 +16,7 @@ pipeline
       steps
       {
         echo "compile success"
-        "mvn compile"
+        mvn compile
       }
     }
     stage("Test")
@@ -24,7 +24,7 @@ pipeline
       steps
       {
         echo "test success"
-        "mvn test"
+        mvn test
       }
     }
     stage("Deploy")

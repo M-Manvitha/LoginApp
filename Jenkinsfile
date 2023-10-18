@@ -8,7 +8,7 @@ pipeline
       steps
       {
         echo "build success"
-        mvn clean
+        bat "mvn clean"
       }
     }
     stage("Compile")
@@ -16,7 +16,7 @@ pipeline
       steps
       {
         echo "compile success"
-        mvn compile
+        bat "mvn compile"
       }
     }
     stage("Test")
@@ -24,7 +24,7 @@ pipeline
       steps
       {
         echo "test success"
-        mvn test
+        bat "mvn test"
       }
     }
     stage("Deploy")
